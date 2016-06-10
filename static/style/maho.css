@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+.grid:before,
+.grid:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.col {
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+}
 body {
   background: #7B1FA2;
   text-align: center;
@@ -8,6 +23,13 @@ body html {
   min-height: 100%;
   min-width: 100%;
   padding: 0;
+  width: 100%;
+}
+.main {
+  margin: 0;
+  margin-top: 200px;
+  padding: 0 16px;
+  overflow: hidden;
 }
 h1,
 h2,
@@ -15,7 +37,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+span {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 h1.title {
@@ -26,8 +49,7 @@ h1.title {
   margin-bottom: 10px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
-p {
-  line-height: 5px;
+span {
   color: #d6a0ed;
 }
 #autocomplete {
@@ -36,13 +58,10 @@ p {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   color: #5a1777;
-  display: inline-block;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  height: 45px;
-  margin: 200px 10px 10px 10px;
   max-width: 400px;
-  padding: 6px 12px;
+  padding: 12px;
   width: 100%;
 }
 #autocomplete:active,
