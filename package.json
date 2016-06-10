@@ -1,0 +1,23 @@
+{
+  "name": "maho-web",
+  "version": "1.0.0",
+  "description": "Repository for hosting the Maho library website.",
+  "main": "index.js",
+  "scripts": {
+    "build": "lessc source/less/theme.less > static/style/maho.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyoudai/maho-web.git"
+  },
+  "keywords": [
+    "maho",
+    "website"
+  ],
+  "author": "George Nemes, Andrei Nemes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyoudai/maho-web/issues"
+  },
+  "homepage": "https://github.com/kyoudai/maho-web#readme"
+}
