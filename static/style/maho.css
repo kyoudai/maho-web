@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #7B1FA2;
+  background: #7E57C2;
   text-align: center;
 }
 body,
@@ -54,14 +54,14 @@ span.description {
   position: relative;
   width: 100%;
   overflow: hidden;
-  color: #d6a0ed;
+  color: #f1edf8;
 }
 #autocomplete {
   border-radius: 2px;
-  border: 1px solid #5a1777;
+  border: 1px solid #643da9;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
-  color: #5a1777;
+  color: #643da9;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   max-width: 400px;
@@ -88,7 +88,7 @@ span.description {
   position: relative;
   width: 50%;
   overflow: hidden;
-  color: #d6a0ed;
+  color: #f1edf8;
   line-height: 64px;
 }
 .nav .menu-left {
@@ -102,7 +102,7 @@ span.description {
   text-align: right;
 }
 .nav ul li {
-  color: #d6a0ed;
+  color: #f1edf8;
   display: inline-block;
   font-size: 14px;
   font-weight: 700;
