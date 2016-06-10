@@ -1,18 +1,6 @@
 * {
   box-sizing: border-box;
 }
-.grid:before,
-.grid:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-.col {
-  display: block;
-  float: left;
-  position: relative;
-  width: 100%;
-}
 body {
   background: #7B1FA2;
   text-align: center;
@@ -29,7 +17,12 @@ body html {
   margin: 0;
   margin-top: 200px;
   padding: 0 16px;
-  overflow: hidden;
+}
+.main:before,
+.main:after {
+  clear: both;
+  content: "";
+  display: table;
 }
 h1,
 h2,
@@ -38,10 +31,16 @@ h4,
 h5,
 h6,
 p,
-span {
+span,
+li {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 h1.title {
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
   color: #ffffff;
   font-size: 36px;
   font-weight: 700;
@@ -49,7 +48,12 @@ h1.title {
   margin-bottom: 10px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
-span {
+span.description {
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
   color: #d6a0ed;
 }
 #autocomplete {
@@ -67,4 +71,59 @@ span {
 #autocomplete:active,
 #autocomplete:focus {
   outline: none;
+}
+.nav {
+  height: 64px;
+}
+.nav:before,
+.nav:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.nav .menu-left,
+.nav .menu-right {
+  display: block;
+  float: left;
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  color: #d6a0ed;
+  line-height: 64px;
+}
+.nav .menu-left {
+  color: white;
+  padding-left: 64px;
+  text-align: left;
+}
+.nav .menu-right {
+  padding-right: 64px;
+  padding-top: 5px;
+  text-align: right;
+}
+.nav ul li {
+  color: #d6a0ed;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 16px;
+  text-transform: uppercase;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav ul li a:hover {
+  color: white;
+}
+@media (max-width: 481px) {
+  .main {
+    margin-top: 100px;
+  }
+  .nav .menu-left {
+    padding-left: 16px;
+  }
+  .nav .menu-right {
+    display: none;
+  }
 }
