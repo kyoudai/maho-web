@@ -1,48 +1,49 @@
-@color-primary: #7B1FA2;
-@ff: "PT Sans", Helvetica, Arial, sans-serif;
+@import "variables";
 
 body {
   background: @color-primary;
-  min-width: 100%;
-  min-height: 100%;
   text-align: center;
+
+  &, html {
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+    padding: 0;
+  }
 }
 
-h1,p {
-  color: lighten(@color-primary, 70%);
-  font-family: @ff;
-  font-weight: 700;
-  text-shadow: 0 1px 1px rgba(0,0,0,.25)
+h1, h2, h3, h4, h5, h6, p {
+  font-family: @font;
 }
 
 h1.title {
+  color: lighten(@color-primary, 70%);
   font-size: 36px;
+  font-weight: 700;
   line-height: 48px;
   margin-bottom: 10px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.25)
 }
 
 p {
   line-height: 5px;
   color: lighten(@color-primary, 40%);
-  text-shadow: none;
-  font-weight: 400;
 }
 
 #autocomplete {
-  margin:10px;
-  margin-top: 200px;
-  width: 100%;
+  border-radius: 2px;
+  border: 1px solid darken(@color-primary, 10%);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+  box-sizing: border-box;
+  color: darken(@color-primary, 10%);
+  display: inline-block;
+  font-family: @font;
+  font-size: 14px;
+  height: 45px;
+  margin: 200px 10px 10px 10px;
   max-width: 400px;
   padding: 6px 12px;
-  font-size: 14px;
-  color: darken(@color-primary, 10%);
-  border-radius: 2px;
-  box-sizing: border-box;
-  display: inline;
-  border: 1px solid darken(@color-primary, 10%);
-  font-family: @ff;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
-  height: 45px;
+  width: 100%;
 
 
   &:active, &:focus {
