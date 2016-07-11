@@ -1,21 +1,21 @@
-var gulp = require('gulp'),
-    browserSync = require('browser-sync').create(),
-    less = require('gulp-less'),
+var browserSync = require('browser-sync').create(),
+    sass = require('gulp-sass'),
     path = require('path'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    gulp = require('gulp');
 
-gulp.task('less', function () {
-  return gulp.src('source/less/theme.less')
-    .pipe(less())
+gulp.task('sass', function() {
+  return gulp.src('source/scss/theme.scss')
+    .pipe(sass())
     .pipe(rename('maho.css'))
     .pipe(gulp.dest('./static/style'))
     .pipe(browserSync.stream());
 });
 
-gulp.task('watch', ['less'], function() {
+gulp.task('watch', ['sass'], function() {
     browserSync.init({ server: './' });
 
-    gulp.watch('source/less/*.less', ['less']);
+    gulp.watch('./source/scss/*.scss', ['sass']);
     gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
